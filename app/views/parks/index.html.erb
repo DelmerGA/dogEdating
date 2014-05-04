@@ -1,1 +1,5 @@
-<p>hello world</p>
+<h1>List of Dog Parks (root= parks_index)</h1>
+
+<% @parks.each do |park| %>
+  <%= link_to(park.name, park) %>
+<% end %>

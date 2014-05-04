@@ -13,9 +13,9 @@ class ParksController < ApplicationController
   #   #redirect_to
   # end
 
-  # def show
-  #   @park = Park.find(params[:id])
-  # end
+  def show
+    @park = Park.find(params[:id])
+  end
 
 
 end

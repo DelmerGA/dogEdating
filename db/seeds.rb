@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Park.create(name: 'Buena Vista Park', address: 'Haight St & Buena Vista E
-San Francisco, CA 94101', leash_rule: 'off-leash')
+San Francisco, CA 94101', leash_rule: 'off-leash', image: 'http://i.imgur.com/pQEfOjSs.jpg')
