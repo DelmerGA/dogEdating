@@ -1,6 +1,8 @@
 <h1><%= @dog.name %></h1>
 
   <p> <img src='<%= @dog.image %>' </p>
+  <!--<%#= image_tag dog.image_url.to_s %>-->
+
   <p> <strong>Breed: </strong><%= @dog.breed %> </p>
   <p> <strong>Age: </strong><%= @dog.age %> </p>
   <p> <strong>Home Park: </strong><%= link_to(@dog.park.name, park_path) %></p>
