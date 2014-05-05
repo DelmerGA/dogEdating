@@ -3,3 +3,8 @@
   <p> <img src='<%= @dog.image %>' </p>
   <p> <strong>Breed: </strong><%= @dog.breed %> </p>
   <p> <strong>Age: </strong><%= @dog.age %> </p>
+  <p> <strong>Home Park: </strong><%= link_to(@dog.park.name, park_path) %></p>
+
+  <%= link_to('All Dog Parks', root_path) %>
+
+

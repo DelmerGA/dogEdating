@@ -9,11 +9,11 @@ class DogsController < ApplicationController
   end
 
   def new
-    @park = Dog.new
+    @dog = Dog.new
   end
 
   def create
-    @dog = Dog.create dog_params
+    @dog = Dog.create(dog_params)
     redirect_to dog
   end
 
