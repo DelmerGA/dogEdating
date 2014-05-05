@@ -7,5 +7,6 @@
   <p> <strong>Age: </strong><%= @dog.age %> </p>
   <p> <strong>Home Park: </strong><%= link_to(@dog.park.name, park_path(@dog.park)) %></p>
 
+  <%= link_to('Edit Dog', edit_dog_path) %></br></br>
   <%= link_to('All Dog Parks', root_path) %>
 
