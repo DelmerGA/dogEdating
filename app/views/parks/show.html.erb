@@ -6,8 +6,9 @@
 
 <h2>Dogs who roam here</h2>
 
-
-  <p> <%= link_to(@park.dogs.name, dog_path) %> </p>
+  <% @park.dogs.each do |dog| %>
+    <p> <%= link_to(dog.name, dog_path(dog)) %> </p>
+  <% end %>
 
   <%= link_to('All Dog Parks', root_path) %>
 

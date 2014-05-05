@@ -13,8 +13,21 @@ class DogsController < ApplicationController
   end
 
   def create
-    @dog = Dog.create(dog_params)
-    redirect_to dog
+    dog = Dog.create dog_params
+    redirect_to(dog)
+  end
+
+  def edit
+    @dog = Dog.find(params[:id])
+  end
+
+  def update
+    @dog = Dog.find(params[:id])
+      if @dog.update_attributes(dog_params)
+        redirect_to(dog)
+      else
+        render :edit
+      end
   end
 
  private
