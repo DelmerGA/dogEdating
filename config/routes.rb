@@ -4,6 +4,10 @@ DogEdating::Application.routes.draw do
 
   get '/parks/:id', to: 'parks#show', as: 'park'
 
+
+  get '/dogs/new', to: 'dogs#new'
+  get '/dogs/:id', to: 'dogs#show', as: 'dog'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
