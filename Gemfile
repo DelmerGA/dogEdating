@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'better_errors'
 
-#gem 'rmagick'
+gem 'rmagick'
 gem 'carrierwave'
 
 group :doc do
