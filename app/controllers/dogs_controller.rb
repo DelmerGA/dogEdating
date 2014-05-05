@@ -24,7 +24,7 @@ class DogsController < ApplicationController
   def update
     @dog = Dog.find(params[:id])
       if @dog.update_attributes(dog_params)
-        redirect_to(dog)
+        redirect_to(@dog)
       else
         render :edit
       end

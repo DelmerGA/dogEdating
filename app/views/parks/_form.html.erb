@@ -1,0 +1,16 @@
+<p><%= form_for @park do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %></br></br>
+
+    <%= f.label :address %>
+    <%= f.text_field :address %></br></br>
+
+    <%= f.label :leash_rule %>
+    <%= f.text_field :leash_rule %></br></br>
+    
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+    <%= f.file_field :image %></br></br>
+
+    <%= f.submit %></br></br></p>
+<% end %>

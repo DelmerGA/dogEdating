@@ -2,28 +2,30 @@ DogEdating::Application.routes.draw do
   
   root to: 'parks#index'
 
-  get '/parks/:id', to: 'parks#show', as: 'park'
-
   resources :dogs
-
-# Prefix Verb   URI Pattern              Controller#Action
-#     root GET    /                        parks#index
-#     park GET    /parks/:id(.:format)     parks#show
-#     dogs GET    /dogs(.:format)          dogs#index
-#          POST   /dogs(.:format)          dogs#create
-#  new_dog GET    /dogs/new(.:format)      dogs#new
-# edit_dog GET    /dogs/:id/edit(.:format) dogs#edit
-#      dog GET    /dogs/:id(.:format)      dogs#show
-#          PATCH  /dogs/:id(.:format)      dogs#update
-#          PUT    /dogs/:id(.:format)      dogs#update
-#          DELETE /dogs/:id(.:format)      dogs#destroy
+  resources :parks
 
 
+# Prefix Verb   URI Pattern               Controller#Action
+#      root GET    /                         parks#index
+#      park GET    /parks/:id(.:format)      parks#show
+#      dogs GET    /dogs(.:format)           dogs#index
+#           POST   /dogs(.:format)           dogs#create
+#   new_dog GET    /dogs/new(.:format)       dogs#new
+#  edit_dog GET    /dogs/:id/edit(.:format)  dogs#edit
+#       dog GET    /dogs/:id(.:format)       dogs#show
+#           PATCH  /dogs/:id(.:format)       dogs#update
+#           PUT    /dogs/:id(.:format)       dogs#update
+#           DELETE /dogs/:id(.:format)       dogs#destroy
+#     parks GET    /parks(.:format)          parks#index
+#           POST   /parks(.:format)          parks#create
+#  new_park GET    /parks/new(.:format)      parks#new
+# edit_park GET    /parks/:id/edit(.:format) parks#edit
+#           GET    /parks/:id(.:format)      parks#show
+#           PATCH  /parks/:id(.:format)      parks#update
+#           PUT    /parks/:id(.:format)      parks#update
+#           DELETE /parks/:id(.:format)      parks#destroy
 
-  
-
-  #get '/dogs/new', to: 'dogs#new'
-  #get '/dogs/:id', to: 'dogs#show', as: 'dog'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
