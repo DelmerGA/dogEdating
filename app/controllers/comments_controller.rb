@@ -7,13 +7,12 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create(comment_params)
-    #binding.pry
     redirect_to dog_path(comment_params[:dog_id])
   end
 
-  def show
-    redirect_to dog_path
-  end
+  # def show
+  #   redirect_to dog_path(comment_params[:dog_id])
+  # end
 
 
   private

@@ -1,6 +1,6 @@
 <h1><%= @park.name %></h1>
 
-  <p> <img src='<%= @park.image %>' </p>
+  <p> <img src='<%= @park.image %>'> </p>
   <p> <strong>Address: </strong><%= @park.address %> </p>
   <p> <strong>Leash Rule: </strong><%= @park.leash_rule %> </p>
 
@@ -8,6 +8,7 @@
 
   <% @park.dogs.each do |dog| %>
     <p> <%= link_to(dog.name, dog_path(dog)) %> </p>
+    <p> <img src= '<%= @dog.image %>'> </p>
   <% end %>
 
   <%= link_to('All Dog Parks', root_path) %>

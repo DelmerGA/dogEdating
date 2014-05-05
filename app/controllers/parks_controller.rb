@@ -15,6 +15,7 @@ class ParksController < ApplicationController
 
   def show
     @park = Park.find(params[:id])
+    @dog = Dog.find(params[:id])
   end
 
   def edit
