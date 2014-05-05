@@ -6,6 +6,8 @@ class DogsController < ApplicationController
 
   def show
     @dog = Dog.find(params[:id])
+    @comment = Comment.new
+    @comments = Comment.all
   end
 
   def new

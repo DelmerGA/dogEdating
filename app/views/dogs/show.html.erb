@@ -8,5 +8,9 @@
   <p> <strong>Home Park: </strong><%= link_to(@dog.park.name, park_path(@dog.park)) %></p>
 
   <%= link_to('Edit Dog', edit_dog_path) %></br></br>
-  <%= link_to('All Dog Parks', root_path) %>
+  <%= link_to('All Dog Parks', root_path) %></br></br></br></br>
 
+<%= render partial: 'comment_form' %>
+<%= render partial: 'comment', collection: @comments %>
+
+  <!-- <p><strong>Comments: </strong><%#= @comments %> </p> -->

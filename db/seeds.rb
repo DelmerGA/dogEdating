@@ -38,3 +38,4 @@ Dog.create(name: 'Dog 5', breed: 'some breed', age: 'some age', image: 'http://i
 
 Dog.create(name: 'Dog 6', breed: 'some breed', age: 'some age', image: 'http://i.imgur.com/jZdX27Hs.png', park_id: 1)
 
+Comment.create(body: 'this is a comment', dog_id: 1)
