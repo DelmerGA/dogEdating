@@ -1,19 +1,17 @@
 class CommentsController < ApplicationController
-
-  # def index
-  #   @comments = Comment.all
-  #   redirect_to @dog(comment_params[:dog_id])
-  # end
+  before_filter :signed_in_user, only: [:create, :destroy]
 
   def create
     @comment = Comment.create(comment_params)
     redirect_to dog_path(comment_params[:dog_id])
   end
 
-  # def show
-  #   redirect_to dog_path(comment_params[:dog_id])
+  # def destroy 
+  #   comment = Comment.find(params[:id])
+  #   dog = comment.dog
+  #   comment.destroy
+  #   redirect_to dog_path
   # end
-
 
   private
 

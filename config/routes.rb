@@ -6,7 +6,8 @@ DogEdating::Application.routes.draw do
   resources :parks
   resources :comments
   resources :users
-  
+  resources :sessions
+
   get '/signup', to: 'users#new'
   delete '/signout', to: 'sessions#destroy'
   get'/signin', to: 'sessions#new'
