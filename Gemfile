@@ -30,6 +30,7 @@ gem 'better_errors'
 
 gem 'rmagick'
 gem 'carrierwave'
+gem 'fog', '~> 1.3.1'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -47,7 +48,7 @@ group :production do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'

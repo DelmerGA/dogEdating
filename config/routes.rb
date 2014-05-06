@@ -5,6 +5,11 @@ DogEdating::Application.routes.draw do
   resources :dogs
   resources :parks
   resources :comments
+  resources :users
+  
+  get '/signup', to: 'users#new'
+  delete '/signout', to: 'sessions#destroy'
+  get'/signin', to: 'sessions#new'
 
 
 #    Prefix Verb   URI Pattern                  Controller#Action
@@ -33,6 +38,9 @@ DogEdating::Application.routes.draw do
 #              PATCH  /comments/:id(.:format)      comments#update
 #              PUT    /comments/:id(.:format)      comments#update
 #              DELETE /comments/:id(.:format)      comments#destroy
+#       signup GET    /signup(.:format)            users#new
+#      signout DELETE /signout(.:format)           sessions#destroy
+#       signin GET    /signin(.:format)            sessions#new
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

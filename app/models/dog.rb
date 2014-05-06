@@ -1,7 +1,7 @@
 class Dog < ActiveRecord::Base
   belongs_to :park
-  #belongs_to :user
+  belongs_to :user
 
-  #mount_uploader :image, ImageUploader
+  mount_uploader :photo, ImageUploader
 
 end

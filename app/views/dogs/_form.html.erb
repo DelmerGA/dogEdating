@@ -1,16 +1,16 @@
 <p><%= form_for @dog do |f| %>
     <%= f.label :name %>
-    <%= f.text_field :name %></br></br>
+    <%= f.text_field :name %><br /><br />
 
     <%= f.label :breed %>
-    <%= f.text_field :breed %></br></br>
+    <%= f.text_field :breed %><br /><br />
 
     <%= f.label :age %>
-    <%= f.text_field :age %></br></br>
+    <%= f.text_field :age %><br /><br />
     
-    <%= f.label :image %>
-    <%= f.text_field :image %>
-    <%= f.file_field :image %></br></br>
+    <%= f.label :photo %>
+    <%= f.file_field :photo %>
+    <%#= f.hidden_field :photo_cache %><br /><br />
 
-    <%= f.submit %></br></br></p>
+    <%= f.submit %><br /><br /></p>
 <% end %>
