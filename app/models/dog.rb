@@ -2,6 +2,5 @@ class Dog < ActiveRecord::Base
   belongs_to :park
   belongs_to :user
 
-  mount_uploader :photo, ImageUploader
-
+  has_many :comments
 end

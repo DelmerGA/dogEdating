@@ -1,12 +1,14 @@
 DogEdating::Application.routes.draw do
   
-  root to: 'parks#index'
+  root to: 'sites#index'
 
   resources :dogs
   resources :parks
   resources :comments
   resources :users
   resources :sessions
+
+  get '/about', to: 'sites#about'
 
   get '/signup', to: 'users#new'
   delete '/signout', to: 'sessions#destroy'

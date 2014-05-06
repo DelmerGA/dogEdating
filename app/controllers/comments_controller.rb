@@ -2,16 +2,23 @@ class CommentsController < ApplicationController
   before_filter :signed_in_user, only: [:create, :destroy]
 
   def create
+    #raise params.inspect
     @comment = Comment.create(comment_params)
-    redirect_to dog_path(comment_params[:dog_id])
+    current_user.comments.push @comment
+    redirect_to dog_path(@comment.dog)
   end
 
-  # def destroy 
-  #   comment = Comment.find(params[:id])
-  #   dog = comment.dog
-  #   comment.destroy
-  #   redirect_to dog_path
-  # end
+  def edit
+    @comment = current_user.comments.find(params[:id])
+    @dog = @comment.dog
+  end
+  
+  def update
+    updated_comment= params.require(:comment).permit(:body)
+    @comment = current_user.comments.find(params[:id])
+    @comment.update_attributes(comment_params)
+    redirect_to dog_path(@comment.dog)
+  end
 
   private
 
