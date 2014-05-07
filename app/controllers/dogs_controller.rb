@@ -7,6 +7,7 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
 
   def show
     @dog = Dog.find(params[:id])
+    @park = Park.find(params[:id])
     @comment = Comment.new
     @comments = @dog.comments
   end
@@ -21,7 +22,7 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
   end
 
   def edit
-    #@dog = current_user.dog(params[:id])
+    @dog = current_user.dog(params[:id])
     @dog = Dog.find(params[:id])
   end
 
@@ -36,7 +37,7 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
 
  private
     def dog_params
-      params.require(:dog).permit(:name, :breed, :age, :photo, :park_id)
+      params.require(:dog).permit(:name, :breed, :age, :image, :park_id)
     end
 
 end
