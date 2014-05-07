@@ -21,6 +21,7 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
   end
 
   def edit
+    #@dog = current_user.dog(params[:id])
     @dog = Dog.find(params[:id])
   end
 

@@ -8,8 +8,16 @@
   <p> <strong>Age: </strong><%= @dog.age %> </p>
   <p> <strong>Home Park: </strong><%= link_to(@dog.park.name, park_path(@dog.park)) %></p>
 
-  <%= link_to('Edit Dog', edit_dog_path) %></br></br>
-  <%= link_to('All Dog Parks', '/parks') %>
+  <%= link_to('Edit Dog', edit_dog_path) %><br />
 
-<%= render partial: 'comment_form' %>
-<%= render partial: 'comment', collection: @comments %>
+  <h4>Leave a note for <%= @dog.name %>: </h4>
+  <%= render partial: 'comment_form' %><br />
+  <%= render partial: 'comment', collection: @comments %><br /><br />
+
+
+  <%= link_to('Sign In', '/signin') %><br />
+  <%= link_to('Sign Up', '/signup') %><br />
+  <%= link_to('All Dog Parks', '/parks') %><br />
+  <%= link_to 'About Us', '/about' %><br />
+  <%= link_to 'Contact', '/contact' %><br />
+  <%= link_to 'Home', '/' %><br />
