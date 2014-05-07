@@ -9,6 +9,7 @@ DogEdating::Application.routes.draw do
   resources :sessions
 
   get '/about', to: 'sites#about'
+  get '/contact', to: 'sites#contact'
 
   get '/signup', to: 'users#new'
   delete '/signout', to: 'sessions#destroy'

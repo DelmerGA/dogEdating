@@ -12,5 +12,8 @@
     <%= f.file_field :photo %>
     <%#= f.hidden_field :photo_cache %><br /><br />
 
+    <%= f.label :park_id %>
+    <%= select("dog", "park_id", Park.find(:all).collect {|park| [ park.name, park.id ] }, {:prompt => 'Select'}) %>
+
     <%= f.submit %><br /><br /></p>
 <% end %>
