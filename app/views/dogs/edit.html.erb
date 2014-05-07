@@ -1,13 +1,5 @@
-<h1>Edit your dog's profile</h1>
-
-<!-- should only be able to edit if logged in -->
+<%- model_class = Dog -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
 <%= render :partial => 'form' %>
-
-<p><%= link_to('All Dog Parks', '/parks') %></p>
-
-<%= link_to('Sign In', '/signin') %><br />
-<%= link_to('Sign Up', '/signup') %><br />
-<%= link_to('All Dog Parks', '/parks') %><br />
-<%= link_to 'About Us', '/about' %><br />
-<%= link_to 'Contact', '/contact' %><br />
-<%= link_to 'Home', '/' %><br />

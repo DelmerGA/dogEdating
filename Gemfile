@@ -8,6 +8,13 @@ gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
+#bootstrap gem
+gem 'twitter-bootstrap-rails'
+
+#gems to help bootstrap run less
+gem 'therubyracer'
+gem "less-rails"
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

@@ -1,19 +1,44 @@
-<p><%= form_for @dog do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %><br /><br />
+<%= form_for @dog, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :breed, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :breed, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :age, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :age, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :park_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :park_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :user_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :user_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :photo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :photo, :class => 'text_field' %>
+    </div>
+  </div>
 
-    <%= f.label :breed %>
-    <%= f.text_field :breed %><br /><br />
-
-    <%= f.label :age %>
-    <%= f.text_field :age %><br /><br />
-    
-    <%= f.label :photo %>
-    <%= f.file_field :photo %>
-    <%#= f.hidden_field :photo_cache %><br /><br />
-
-    <%= f.label :park_id %>
-    <%= select("dog", "park_id", Park.find(:all).collect {|park| [ park.name, park.id ] }, {:prompt => 'Select'}) %>
-
-    <%= f.submit %><br /><br /></p>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                dogs_path, :class => 'btn' %>
+  </div>
 <% end %>
