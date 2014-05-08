@@ -7,6 +7,6 @@
 <h2>Dogs who roam here</h2>
 
   <% @park.dogs.each do |dog| %>
-    <p> <%= link_to(dog.name, dog_path(dog)) %> </p>
-    <p> <img src= '<%= @dog.image %>'> </p>
+    <p><%= link_to(dog.name, dog_path(dog)) %> </p>
+    <p><%= image_tag dog.image, width: '300px' %></p>
   <% end %>

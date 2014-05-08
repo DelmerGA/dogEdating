@@ -6,6 +6,10 @@
   <%= link_to(dog.name, dog) %></br></br>
 <% end %>
 
+ <%= direct_upload_form_for @uploader do |f| %>
+      <p><%= f.file_field :image %></p>
+      <p><%= f.submit "Upload Image" %></p>
+    <% end %>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_dog_path,

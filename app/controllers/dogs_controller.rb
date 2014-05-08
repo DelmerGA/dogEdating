@@ -3,16 +3,25 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
 
   def index
     @dogs = Dog.all
+    @uploader = Dog.new.image
+    @uploader.success_action_redirect = @dogs
   end
 
   def show
-    @dog = Dog.find(params[:id])
-    @comment = Comment.new
-    @comments = @dog.comments
+    @dog = Dog.find_by_id(params[:id])
+    
+    if @dog.nil?
+      flash[:alert] = "Oops! That resource is not available."
+      redirect_to parks_path
+    else 
+      @comment = Comment.new
+      @comments = @dog.comments
+    end
   end
 
   def new
-    @dog = Dog.new
+    #@dog = Dog.new
+    @dog = Dog.new(key: params[:key])
   end
 
   def create

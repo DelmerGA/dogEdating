@@ -18,19 +18,19 @@
     </div>
   </div>
   
-         <%= select("dog", "park_id", Park.pluck(:name, :id), {:prompt => 'Select'}) %>
-
+  <%= select("dog", "park_id", Park.pluck(:name, :id), {:prompt => 'Select'}) %>
 
   <div class="controls">
     <%= f.hidden_field :user_id, :class => 'hidden_field' %>
     </div>
-  
-  <div class="control-group">
-    <%= f.label :image, :class => 'control-label' %>
+     
+    <%= f.hidden_field :key %>
+ <!--  <div class="control-group">
+    <%#= f.label :image, :class => 'control-label' %>
     <div class="controls">
-      <%= f.file_field :image %>
+      <%#= f.file_field :image %>
     </div>
-  </div>
+  </div> -->
 
 
   <div class="form-actions">
