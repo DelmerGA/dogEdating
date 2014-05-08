@@ -3,12 +3,13 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
 
   def index
     @dogs = Dog.all
-    @uploader = Dog.new.image
-    @uploader.success_action_redirect = @dogs
+    #@uploader.success_action_redirect = @dogs
   end
 
   def show
     @dog = Dog.find_by_id(params[:id])
+    @uploader = Dog.new.image
+    @uploader.success_action_redirect = @dogs
     
     if @dog.nil?
       flash[:alert] = "Oops! That resource is not available."
@@ -20,8 +21,7 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
   end
 
   def new
-    #@dog = Dog.new
-    @dog = Dog.new(key: params[:key])
+    @dog = Dog.new
   end
 
   def create

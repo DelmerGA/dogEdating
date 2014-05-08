@@ -18,12 +18,12 @@ class Dog < ActiveRecord::Base
   class ImageWorker
     include Sidekiq::Worker
     
-    def perform(id, key)
-      dog = dog.find(id)
-      dog.key = key
-      dog.remote_image_url = dog.image.direct_fog_url(with_path: true)
-      dog.save!
-      dog.update_column(:image_processed, true)
-    end
+    # def perform(id, key)
+    #   dog = dog.find(id)
+    #   dog.key = key
+    #   dog.remote_image_url = dog.image.direct_fog_url(with_path: true)
+    #   dog.save!
+    #   dog.update_column(:image_processed, true)
+    # end
   end
 end

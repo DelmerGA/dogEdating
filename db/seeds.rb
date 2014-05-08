@@ -32,17 +32,17 @@ Park.create(name: 'Walter Haas Park and Playground', address: 'Diamond Heights B
 Park.create(name: 'Golden Gate Park', address: 'From Stanyan St. to Great Hwy, between Lincoln Way and Fulton St.', leash_rule: 'Off Leash in mentioned areas', image: '')
 
 
-Dog.create(name: 'Dog 1- Riva', breed: 'Golden Retriever', age: '1 year, 6 months', photo: 'Dogs01.jpg', park_id: 1)
+# Dog.create(name: 'Dog 1- Riva', breed: 'Golden Retriever', age: '1 year, 6 months', photo: 'Dogs01.jpg', park_id: 1)
 
-Dog.create(name: 'Dog 2', breed: 'some breed', age: 'some age', photo: 'Dogs01.jpg', park_id: 5)
+# Dog.create(name: 'Dog 2', breed: 'some breed', age: 'some age', photo: 'Dogs01.jpg', park_id: 5)
 
-Dog.create(name: 'Dog 3', breed: 'some breed', age: 'some age', photo: 'http://i.imgur.com/jZdX27Hs.png', park_id: 4)
+# Dog.create(name: 'Dog 3', breed: 'some breed', age: 'some age', photo: 'http://i.imgur.com/jZdX27Hs.png', park_id: 4)
 
-Dog.create(name: 'Dog 4', breed: 'some breed', age: 'some age', photo: 'http://i.imgur.com/jZdX27Hs.png', park_id: 3)
+# Dog.create(name: 'Dog 4', breed: 'some breed', age: 'some age', photo: 'http://i.imgur.com/jZdX27Hs.png', park_id: 3)
 
-Dog.create(name: 'Dog 5', breed: 'some breed', age: 'some age', photo: 'http://i.imgur.com/jZdX27Hs.png', park_id: 2)
+# Dog.create(name: 'Dog 5', breed: 'some breed', age: 'some age', photo: 'http://i.imgur.com/jZdX27Hs.png', park_id: 2)
 
-Dog.create(name: 'Dog 6', breed: 'some breed', age: 'some age', photo: 'http://i.imgur.com/jZdX27Hs.png', park_id: 1)
+# Dog.create(name: 'Dog 6', breed: 'some breed', age: 'some age', photo: 'http://i.imgur.com/jZdX27Hs.png', park_id: 1)
 
 
-Comment.create(body: 'this is a comment', dog_id: 1, user_id: 1)
+# Comment.create(body: 'this is a comment', dog_id: 1, user_id: 1)
