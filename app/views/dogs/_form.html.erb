@@ -18,16 +18,8 @@
     </div>
   </div>
   
-   <fieldset>          
-        <div class="control-group">
-            <label class="control-label">Home Park:</label>
-        <div class="controls">
-            <select>
-                <option value="1">Name of Park</option>
-            </select>
-        </div>
-        </div>
-    </fieldset>
+         <%= select("dog", "park_id", Park.pluck(:name, :id), {:prompt => 'Select'}) %>
+
 
   <div class="controls">
     <%= f.hidden_field :user_id, :class => 'hidden_field' %>
@@ -39,6 +31,7 @@
       <%= f.file_field :image %>
     </div>
   </div>
+
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>

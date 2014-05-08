@@ -7,7 +7,6 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
 
   def show
     @dog = Dog.find(params[:id])
-    @park = Park.find(params[:id])
     @comment = Comment.new
     @comments = @dog.comments
   end
