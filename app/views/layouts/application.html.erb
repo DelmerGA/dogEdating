@@ -11,34 +11,14 @@
   <meta name='viewport' content='width=device-width', 'initial-scale=1.0'>
 </head>
 <body>
-<div class='navbar navbar-inverse navbar-fixed-top'>
-  <div class='navbar-inner'>
-    <div class='container'>
-      <a class='btn btn-navbar' data-toggle='collapse' data-target='.nav-collapse'>
-        <span class='icon-bar'></span>
-        <span class='icon-bar'></span>
-        <span class='icon-bar'></span>
-      </a>
-      <a class='brand' href='/'>dogEdating</a>
-      <div class='nav-collapse'>
-        <ul class='nav'>
-          <li><%= link_to('Sign In', '/signin') %></li>
-          <li><%= link_to('Sign Up', '/signup') %></li>
-          <li><%= link_to('All Dog Parks', '/parks') %></li>
-          <li><%= link_to 'About Us', '/about' %></li>
-          <li><%= link_to 'Contact', '/contact' %></li>
-          <li><%= link_to 'Home', '/' %></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+ <%= render 'layouts/header' %>
 <% flash.each do |type, message| %>
   <div class="alert <%= bootstrap_class_for(type) %> fade in">
     <button class="close" data-dismiss="alert">×</button>
     <%= message %>
   </div>
 <% end %>
+
 <div class='container'>
 <%= yield %>
 </div>

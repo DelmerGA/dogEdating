@@ -17,6 +17,7 @@ class Dog < ActiveRecord::Base
 
   class ImageWorker
     include Sidekiq::Worker
+    #sidekiq_options retry: false
     
     def perform(id, key)
       dog = dog.find(id)
