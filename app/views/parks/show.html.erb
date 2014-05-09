@@ -1,6 +1,6 @@
 <h1><%= @park.name %></h1>
 
-  <p> <img src='<%= @park.image %>'> </p>
+  <p> <%= image_tag @park.image.url, width: "200px", style: "border-radius: 10px;" %> </p>
   <p> <strong>Address: </strong><%= @park.address %> </p>
   <p> <strong>Leash Rule: </strong><%= @park.leash_rule %> </p><br />
 
