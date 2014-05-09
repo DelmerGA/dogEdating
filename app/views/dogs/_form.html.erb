@@ -1,36 +1,26 @@
 <%= form_for @dog, :html => {:multipart => true} do |f| %>
 
-  <div class="control-group">
-    <%= f.label :name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :name, :class => 'text_field' %>
-    </div>
+  <div class="controls">
+    <%= f.text_field :name, class: 'text_field', placeholder: 'Name' %>
   </div>
-  <div class="control-group">
-      <%= f.text_field :breed, :class => 'text_field', :placeholder => 'Breed' %>
-    </div>
+  <div class="controls">
+    <%= f.text_field :breed, class: 'text_field', placeholder: 'Breed' %>
   </div>
-  <div class="control-group">
-    <%= f.label :age, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :age, :class => 'text_field' %>
-    </div>
+  <div class="controls">
+    <%= f.text_field :age, class: 'text_field', placeholder: 'Age' %>
   </div>
-  
-  <%= select("dog", "park_id", Park.pluck(:name, :id), {:prompt => 'Select'}) %>
-
+  <div class="controls"> 
+    <%= select("dog", "park_id", Park.pluck(:name, :id), {:prompt => 'Home Park'}) %>
+  </div>
   <div class="controls">
     <%= f.hidden_field :user_id, :class => 'hidden_field' %>
-    </div>
-
-  <div class="controls">
-    <%= f.file_field :image %>
   </div>
-
+  <div class="controls">
+    <%= f.file_field :image, placeholder: 'Image' %>
+  </div>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                dogs_path, :class => 'btn' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), dogs_path, :class => 'btn' %>
   </div>
 
 <% end %>

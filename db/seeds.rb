@@ -9,10 +9,10 @@
 Park.create(name: 'McLaren Park', address: 'Shelly Dr. & Mansell St.', leash_rule: 'Off Leash', image: 'http://i.imgur.com/pQEfOjSs.jpg')
 Park.create(name: 'Bernal Heights', address: 'Bernal Heights & Esmeralda', leash_rule: 'Off Leash', image: '')
 Park.create(name: 'St. Mary’s Park', address: 'Murray Ave. & Justin Dr.', leash_rule: 'Off Leash', image: '')
-Park.create(name: 'Crissy Field', address: 'Mason Street', leash_rule: 'Designated off lease area ', image: '')
+Park.create(name: 'Crissy Field', address: 'Mason Street', leash_rule: 'Designated off leash area ', image: '')
 Park.create(name: 'Ocean Beach', address: 'Great Highway at Sloat', leash_rule: '
 Off leash Stairwell 1 to 21', image: '')
-Park.create(name: 'Duboce Park', address: 'Duboce Ave and Noe St.', leash_rule: 'Designated off lease area', image: '')
+Park.create(name: 'Duboce Park', address: 'Duboce Ave and Noe St.', leash_rule: 'Designated off leash area', image: '')
 Park.create(name: 'Corona Heights', address: 'Randall Field at Museum Way & Roosevelt Way', leash_rule: 'Off Leash', image: '')
 Park.create(name: 'Glen Canyon Park', address: 'Bosworth St. & Diamond Heights Blvd.', leash_rule: 'Leashes Required', image: '')
 Park.create(name: 'Buena Vista Park', address: 'Buena Vista West and Central St.', leash_rule: 'Off Leash', image: '')

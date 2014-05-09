@@ -43,6 +43,11 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
       end
   end
 
+  def destroy
+    Dog.find(params[:id]).destroy
+    redirect_to parks_path
+  end
+
  private
     def dog_params
       params.require(:dog).permit(:name, :breed, :age, :image, :park_id)

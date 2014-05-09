@@ -4,7 +4,6 @@ class CreateDogs < ActiveRecord::Migration
       t.string :name
       t.string :breed
       t.string :age
-      t.text :image
       t.references :park, index: true
       t.references :user, index: true
 

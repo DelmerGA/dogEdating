@@ -8,5 +8,5 @@
 
   <% @park.dogs.each do |dog| %>
     <p><%= link_to(dog.name, dog_path(dog)) %> </p>
-    <p><%= image_tag dog.image, width: '300px' %></p>
+    <p><%= image_tag dog.image, width: '200px' %></p>
   <% end %>

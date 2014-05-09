@@ -5,13 +5,9 @@
 <dl class="dl-horizontal">
 
   <dd><%= image_tag @dog.image.url, width: "200px", style: "border-radius: 10px;" %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @dog.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:breed) %>:</strong></dt>
   <dd><%= @dog.breed %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:age) %>:</strong></dt>
   <dd><%= @dog.age %></dd>
-  <dt><strong>Home <%= model_class.human_attribute_name(:park) %>:</strong></dt>
   <dd><%= link_to @dog.park.name, park_path(@dog.park) %></dd>
   
 </dl>
