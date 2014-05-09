@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
 
-  def show
-    @user = User.find(params[:id])
-    @dogs = @user.dogs
-  end
+  # def show
+  #   @user = User.find(params[:id])
+  #   @dogs = @user.dogs
+  # end
 
   def new
     @user = User.new
@@ -21,11 +21,11 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
-    @user = User.find(params[:id])
-    @user.update_attributes(user_params)
-    redirect_to @user
-  end
+  # def update
+  #   @user = User.find(params[:id])
+  #   @user.update_attributes(user_params)
+  #   redirect_to @user
+  # end
 
   private
     def user_params

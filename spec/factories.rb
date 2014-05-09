@@ -20,7 +20,10 @@ FactoryGirl.define do
     name "Rusty"
     breed "mixed breed"
     age "2 years"
-    home park "Narnia"
+    park_id 1
+    user_id 1
+    image "img.jpg"
+
   end
 
   factory :park do
