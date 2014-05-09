@@ -7,9 +7,7 @@
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :breed, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :breed, :class => 'text_field' %>
+      <%= f.text_field :breed, :class => 'text_field', :placeholder => 'Breed' %>
     </div>
   </div>
   <div class="control-group">
@@ -25,6 +23,9 @@
     <%= f.hidden_field :user_id, :class => 'hidden_field' %>
     </div>
 
+  <div class="controls">
+    <%= f.file_field :image %>
+  </div>
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>

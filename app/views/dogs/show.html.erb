@@ -16,10 +16,6 @@
   
 </dl>
 
-  <%= direct_upload_form_for @uploader do |f| %>
-      <p><%= f.file_field :image %></p>
-      <p><%= f.submit "Upload Image" %></p>
-    <% end %>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

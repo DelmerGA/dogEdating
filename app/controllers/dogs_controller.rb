@@ -8,8 +8,8 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
 
   def show
     @dog = Dog.find_by_id(params[:id])
-    @uploader = Dog.new.image
-    @uploader.success_action_redirect = @dogs
+    #@uploader = Dog.new.image
+    #@uploader.success_action_redirect = @dogs
     
     if @dog.nil?
       flash[:alert] = "Oops! That resource is not available."

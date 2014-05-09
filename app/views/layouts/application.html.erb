@@ -22,12 +22,20 @@
       <a class='brand' href='/'>dogEdating</a>
       <div class='nav-collapse'>
         <ul class='nav'>
-          <li><%= link_to('Sign In', '/signin') %></li>
-          <li><%= link_to('Sign Up', '/signup') %></li>
+          
           <li><%= link_to('All Dog Parks', '/parks') %></li>
           <li><%= link_to 'About Us', '/about' %></li>
           <li><%= link_to 'Contact', '/contact' %></li>
           <li><%= link_to 'Home', '/' %></li>
+
+          <% if !current_user %>
+            <li><%= link_to('Sign In', '/signin') %></li>
+            <li><%= link_to('Sign Up', '/signup') %></li>
+          <% end %>
+          
+          <% if current_user %>
+          <li><%= link_to 'Sign Out', signout_path, {method: 'delete'} %></li>
+          <% end %>
         </ul>
       </div>
     </div>

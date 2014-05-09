@@ -4,7 +4,14 @@
 
   <p>Search <em>San Francisco Dog Parks</em> and track down that dog owner you've been pining over!</p><br />
 
+ <% if !current_user %>
   <a class='btn' href='/signup'>Sign Up</a>
   <a class='btn' href='/signin'>Sign In</a>
+ <% end %>
 
+<% if current_user %>
+  <a class='btn' href='/parks'>All Parks</a>
+  <a class='btn' href='/dogs/new'>Add Your Dog</a><br /><br />
+  <a class='btn' href='/signout'>Sign Out</a>
+<% end %>
 

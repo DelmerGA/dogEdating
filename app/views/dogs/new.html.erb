@@ -2,4 +2,10 @@
 <div class="page-header">
   <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
 </div>
-<%= render :partial => 'form' %>
+<%= render :partial => 'form' %> 
+
+<% if "http://i.imgur.com/yLheDYM.png" == nil %>
+  <img src="http://i.imgur.com/yLheDYM.png">
+<% else %>
+  <img src="http://www.thepuppyapi.com/puppy?format=src"> 
+<% end %>
