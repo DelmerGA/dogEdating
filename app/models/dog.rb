@@ -3,6 +3,7 @@ class Dog < ActiveRecord::Base
   belongs_to :user
   has_many :comments
 
+  #this is for CarrierWave
   mount_uploader :image, ImageUploader
   
   # after_save :enqueue_image

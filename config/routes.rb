@@ -12,7 +12,7 @@ DogEdating::Application.routes.draw do
   get '/contact', to: 'sites#contact'
 
   get '/signup', to: 'users#new'
-  delete '/signout', to: 'sessions#destroy'
+  delete '/signout', to: 'sessions#destroy', via: :delete
   get'/signin', to: 'sessions#new'
 
 

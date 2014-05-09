@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # Sign the user in and redirect to home page.
       sign_in user
-      flash[:notice]='You are now signed in.'
+      flash[:notice]='You have successfully signed in!'
       redirect_to root_path
     else
       # Create an error message and re-render the signin form.

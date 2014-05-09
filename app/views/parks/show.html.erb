@@ -2,11 +2,13 @@
 
   <p> <img src='<%= @park.image %>'> </p>
   <p> <strong>Address: </strong><%= @park.address %> </p>
-  <p> <strong>Leash Rule: </strong><%= @park.leash_rule %> </p>
+  <p> <strong>Leash Rule: </strong><%= @park.leash_rule %> </p><br />
 
-<h2>Dogs who roam here</h2>
+  <a class='btn' href='/dogs/new'>Add Your Dog</a><br /><br />
+
+<h3>Dogs who roam here</h>
 
   <% @park.dogs.each do |dog| %>
     <p><%= link_to(dog.name, dog_path(dog)) %> </p>
-    <p><%= image_tag dog.image, width: '200px' %></p>
+    <p><%= image_tag dog.image, width: "150x", style: "border-radius: 10px" %></p>
   <% end %>
