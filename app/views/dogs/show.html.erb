@@ -3,7 +3,7 @@
   <h1><%=@dog.name %></h1>
 </div>
 
-  <dd><%= image_tag @dog.image.url, width: "200px", style: "border-radius: 10px;" %></dd>
+  <dd><%= image_tag @dog.image.url %></dd>
   <dd><%= @dog.name %></dd>
   <dd><%= @dog.breed %></dd>
   <dd><%= @dog.age %></dd>
@@ -14,7 +14,7 @@
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              dogs_path, :class => 'btn'  %>
+              parks_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_dog_path(@dog), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

@@ -1,6 +1,9 @@
 <h1><%= @park.name %></h1>
+  
+  <div class="park">
+    <p> <%= image_tag @park.image.url %> </p>
+  </div>
 
-  <p> <%= image_tag @park.image.url %> </p>
   <p> <strong>Address: </strong><%= @park.address %> </p>
   <p> <strong>Leash Rule: </strong><%= @park.leash_rule %> </p><br />
 
