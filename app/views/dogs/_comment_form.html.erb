@@ -1,5 +1,4 @@
 <%= form_for @comment do |f| %>
   <%= f.text_area :body %>
-  <%= f.hidden_field :dog_id, value: @dog.id %><br />
   <%= f.submit %>
 <% end %>

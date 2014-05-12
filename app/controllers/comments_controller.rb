@@ -9,15 +9,15 @@ class CommentsController < ApplicationController
 
   def edit
     if 
+      @comment = current_user.comments.find(params[:id])
+      @dog = @comment.dog
+    else
       @comment == nil
       flash[:alert] = "Oops! You don't have permissions for that."
       redirect_to dog_path(params[:id])
-    else
-      @comment = current_user.comments.find(params[:id])
-      @dog = @comment.dog
     end
   end
-  
+
   def update
     updated_comment= params.require(:comment).permit(:body)
     @comment = current_user.comments.find(params[:id])
@@ -28,9 +28,9 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:body, :dog_id)
+    params.require(:comment).permit(:body)
   end
 
 end
 
-
+ 

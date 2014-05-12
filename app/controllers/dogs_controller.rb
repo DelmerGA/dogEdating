@@ -11,7 +11,7 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
     
     if @dog.nil?
       flash[:alert] = "Oops! That resource is not available."
-      redirect_to parks_path
+      redirect_to '/dogs/new'
     else 
       @comment = Comment.new
       @comments = @dog.comments
