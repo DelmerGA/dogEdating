@@ -3,14 +3,13 @@
   <h1><%=@dog.name %></h1>
 </div>
 
-  <dd><%= image_tag @dog.image.url %></dd>
-  <dd><%= @dog.name %></dd>
-  <dd><%= @dog.breed %></dd>
-  <dd><%= @dog.age %></dd>
-  <dd><%= link_to @dog.park.name, park_path(@dog.park) %></dd>
-  
-</dl>
-
+<div class="dog">
+  <%= image_tag @dog.image.url %><br />
+</div>
+  <%= @dog.name %><br />
+  <%= @dog.breed %><br />
+  Age: <%= @dog.age %><br />
+  Roams at: <%= link_to @dog.park.name, park_path(@dog.park) %><br />
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

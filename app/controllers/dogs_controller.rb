@@ -30,7 +30,7 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
   def edit
     if @dog.nil?
       flash[:alert] = "Oops! You don't have permissions for that."
-      redirect_to parks_path
+      redirect_to dog_path(params[:id])
     else
       @dog = current_user.dog.find(params[:id])
       @dog = Dog.find(params[:id])
