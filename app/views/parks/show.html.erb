@@ -1,14 +1,14 @@
 <h1><%= @park.name %></h1>
 
-  <p> <%= image_tag @park.image.url, width: "200px", style: "border-radius: 10px;" %> </p>
+  <p> <%= image_tag @park.image.url %> </p>
   <p> <strong>Address: </strong><%= @park.address %> </p>
   <p> <strong>Leash Rule: </strong><%= @park.leash_rule %> </p><br />
 
   <a class='btn' href='/dogs/new'>Add Your Dog</a><br /><br />
 
 <h3>Dogs who roam here</h>
-
+<!--shows all dogs with this park_id as their home park -->
   <% @park.dogs.each do |dog| %>
     <p><%= link_to(dog.name, dog_path(dog)) %> </p>
-    <p><%= image_tag dog.image, width: "150x", style: "border-radius: 10px" %></p>
+    <p><%= image_tag dog.image %></p>
   <% end %>

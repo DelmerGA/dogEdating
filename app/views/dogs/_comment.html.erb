@@ -1,5 +1,6 @@
 <h4>Comment: </h4>
 
-<%= link_to Dog.find(User.find(Comment.find(4).user_id)).name, "/dogs/#{Dog.find(User.find(Comment.find(4).user_id)).id}" %>:  <%= comment.body %><br />
+<%#= Dog.find(User.find(Comment.find.user_id)).name, "/dogs/#{Dog.find(User.find(Comment.find.user_id)).id}" %>
+<%= comment.body %><br />
 <%= link_to "Edit Comment", edit_comment_path(comment), method: 'get' %><br />
 

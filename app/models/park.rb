@@ -1,6 +1,6 @@
 class Park < ActiveRecord::Base
   has_many :dogs
 
-  #this is for CarrierWave
+  #CarrierWave ImageUploader class
   mount_uploader :image, ImageUploader
 end

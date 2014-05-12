@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-has_many :dogs
+has_one :dogs
 has_many :comments
 
 has_secure_password

@@ -1,16 +1,36 @@
+# module ApplicationHelper
+#     def bootstrap_class_for flash_type
+#     case flash_type
+#       when :success
+#         "alert-success"
+#       when :error
+#         "alert-error"
+#       when :alert
+#         "alert-block"
+#       when :notice
+#         "alert-info"
+#       else
+#         flash_type.to_s
+#     end
+#   end
+# end
+
+
 module ApplicationHelper
-    def bootstrap_class_for flash_type
+
+  def bootstrap_class_for flash_type
     case flash_type
       when :success
-        "alert-success"
+        "alert-success" # Green
       when :error
-        "alert-error"
+        "alert-danger" # Red
       when :alert
-        "alert-block"
+        "alert-warning" # Yellow
       when :notice
-        "alert-info"
+        "alert-info" # Blue
       else
         flash_type.to_s
     end
   end
+
 end

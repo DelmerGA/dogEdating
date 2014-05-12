@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       redirect_to root_path
     else
       # Create an error message and re-render the signin form.
-      flash[:error]='Invalid email address/password combination.'
+      flash[:error]='There was an issue with your sign in. Please try again.'
       redirect_to signin_path
     end
   end
