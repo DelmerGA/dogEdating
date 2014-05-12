@@ -31,6 +31,14 @@ class ParksController < ApplicationController
       end
     end
 
+  def search
+    @parks = Park.all
+    @search = SimpleSearch.new SimpleSearch.get_params(params)
+    if @search.valid?
+      @parks = @search.search_within Park.all, :name
+    end
+  end
+
   private
     def park_params
       params.require(:park).permit(:name, :address, :leash_rule, :image)

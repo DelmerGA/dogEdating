@@ -3,10 +3,14 @@ DogEdating::Application.routes.draw do
   root to: 'sites#index'
 
   resources :dogs
-  resources :parks
+  #resources :parks
   resources :comments
   resources :users
   resources :sessions
+
+  resources :parks do
+    get 'search', on: :collection
+  end
 
   get '/about', to: 'sites#about'
   get '/contact', to: 'sites#contact'

@@ -1,0 +1,15 @@
+<h1>search!</h1>
+
+<%= form_for(@search, url: '/parks/search', method: 'get') do |f| %>
+  <%= f.label(:q, "Search for:") %>
+  <%= f.text_field :q, class: 'form-control', placeholder: 'Search for a park' %>
+  <button class='btn btn-primary' type='submit'>Search</button>
+    <%#= if @search.errors.has_key?(:q) %>
+      <!--<span class='help-block text-danger'><%#= @search.errors[:q].first %></span>-->
+    <%# end %>
+
+<% end %>
+
+<% @parks.each do |park| %>
+  <%= link_to(park.name, park) %></br></br>
+<% end %>
